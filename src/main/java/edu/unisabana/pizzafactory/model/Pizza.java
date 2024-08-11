@@ -1,12 +1,14 @@
 package edu.unisabana.pizzafactory.model;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class Pizza {
-    private float tamano;
+public abstract class Pizza {
+    private String tamano;
     private ArrayList<Ingrediente> ingredientes;
 
-    public Pizza(float tamano, ArrayList<Ingrediente> ingredientes) {
+    public Pizza(String tamano, ArrayList<Ingrediente> ingredientes) {
         this.tamano = tamano;
         this.ingredientes = ingredientes;
     }
@@ -17,14 +19,25 @@ public class Pizza {
 
     public void setIngredientes(ArrayList<Ingrediente> ingredientes) {
         this.ingredientes = ingredientes;
-        System.out.println("Agregando ingredientes...");
     }
 
-    public float getTamano() {
+    public String getTamano() {
         return tamano;
     }
 
-    public void setTamano(float tamano) {
+    public void setTamano(String tamano) {
         this.tamano = tamano;
     }
+
+    public void aplicarIngredientes(){
+        Logger.getLogger(Pizza.class.getName())
+                .log(Level.INFO, "[~~]. Agregando ingredientes... " + this.ingredientes);
+
+        //CODIGO DE LLAMADO AL MICROCONTROLADOR
+    }
+
+    public abstract void crearAmasador();
+    public abstract void crearMoldeador();
+    public abstract void crearHorneador();
+
 }
