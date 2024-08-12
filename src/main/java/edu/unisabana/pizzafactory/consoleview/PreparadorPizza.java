@@ -18,7 +18,7 @@ public class PreparadorPizza {
                 new Ingrediente("Queso", 1),
                 new Ingrediente("Jamon", 2)
         ));
-        PizzaGruesa gruesa = new PizzaGruesa("MEDIANA", ingredientesGruesaMediana);
+        Pizza gruesa = new PizzaGruesa("MEDIANA", ingredientesGruesaMediana);
         gruesa.aplicarIngredientes();
         gruesa.crearAmasador();
         gruesa.crearMoldeador();
@@ -30,7 +30,7 @@ public class PreparadorPizza {
                 new Ingrediente("Peperoni", 2),
                 new Ingrediente("Cebolla", 1)
         ));
-        PizzaDelgada delgada = new PizzaDelgada("PEQUEÑA", ingredientesDelgadaPequena);
+        Pizza delgada = new PizzaDelgada("PEQUEÑA", ingredientesDelgadaPequena);
         delgada.aplicarIngredientes();
         delgada.crearAmasador();
         delgada.crearMoldeador();
@@ -41,7 +41,7 @@ public class PreparadorPizza {
                 new Ingrediente("Lechuga", 1),
                 new Ingrediente("Quinua", 2)
         ));
-        PizzaIntegral integral = new PizzaIntegral("MEDIANA", ingredientesIntegralMediana);
+        Pizza integral = new PizzaIntegral("MEDIANA", ingredientesIntegralMediana);
         integral.aplicarIngredientes();
         integral.crearAmasador();
         integral.crearMoldeador();
